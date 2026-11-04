@@ -1,0 +1,83 @@
+:root{--viewer-header:76px}
+html,body{height:100%;overflow:hidden}
+.header{height:var(--viewer-header);padding:0 30px;justify-content:flex-start;background:var(--paper)}
+.header .brand{width:auto;gap:12px}
+.header .brand-logo{width:48px;height:58px}
+.header .brand span{font-size:20px;letter-spacing:3px}
+.experience#model-panel{display:block;height:calc(100dvh - var(--viewer-header));min-height:0}
+#model-panel .stage-3d{width:100%;height:100%;min-height:0}
+.scene-options{top:20px;right:24px;display:flex;align-items:center;gap:8px;z-index:5}
+.scene-top{top:30px;left:26px}
+.lighting-modes{display:flex;gap:2px;padding:3px;border:1px solid #d9e1d4;background:#f8faf0ed;border-radius:6px}
+.scene-options .lighting-modes button{border:0;box-shadow:none;background:transparent;padding:8px 13px;font-size:11px}
+.scene-options .lighting-modes button[aria-pressed=true]{background:#34533f;color:#fff}
+.scene-bottom{bottom:28px}
+.camera-presets{box-shadow:0 4px 20px #2c472c18}
+#viewer[data-lighting=night] .scene-top{color:#e2e9f3;text-shadow:0 1px 4px #000}
+#viewer[data-lighting=night] .live-dot{background:#b7d3a1}
+#viewer[data-lighting=night] .walk-hotspot{box-shadow:0 3px 20px #0004}
+@media(max-width:680px){
+ :root{--viewer-header:66px}
+ .header{height:var(--viewer-header);padding:0 16px}
+ .header .brand-logo{width:38px;height:46px}
+ .header .brand span{font-size:16px;letter-spacing:2px}
+ .scene-options{top:14px;right:12px;gap:5px}
+ .scene-options .lighting-modes button{padding:8px 10px;font-size:10px}
+ .scene-top{top:70px;left:16px;font-size:9px}
+ .scene-tools{right:12px}
+ .scene-bottom{bottom:18px;max-width:calc(100% - 16px)}
+ .camera-presets button{font-size:9px;padding:10px 9px}
+ .camera-presets #rotate{padding:8px;gap:4px}
+ .camera-presets #rotate svg{width:18px;height:18px}
+}
+@media(max-width:360px){.camera-presets button{padding:10px 6px}.camera-presets>span{margin:0 2px}}
+
+/* Compact controls: building and floor selection only. */
+.experience#model-panel{display:grid;grid-template-columns:236px minmax(0,1fr)}
+.explore-sidebar{min-width:0;overflow:auto;background:var(--paper);border-right:1px solid #dedfd5;padding:24px 18px;color:var(--ink)}
+.explore-sidebar>header{display:flex;align-items:center;justify-content:space-between}
+.explore-sidebar h1{font:400 27px/1.2 Georgia,serif;letter-spacing:-.4px;margin:0}
+.explore-sidebar .floor-picker{margin:20px 0 0;padding:0;border:0;gap:9px}
+.explore-sidebar .floor-picker label{font-size:11px;margin-top:8px}
+.explore-sidebar .floor-picker select{font-size:12px;padding:10px 9px}
+.explore-sidebar .floor-picker button{font-size:12px;padding:10px}
+.explore-sidebar .floor-picker p{font-size:10px;line-height:1.6;margin-top:10px}
+#view-building{background:#edf0e7;color:#304b39;border:1px solid #cdd5c5}
+#explore-toggle{display:none;margin-left:auto;padding:8px 13px;border:1px solid #c7d0be;border-radius:5px;color:#304b39;font-size:12px;background:#fff9}
+#close-explore{display:none;font-size:24px;line-height:1;color:#47604c}
+@media(max-width:800px){
+ .experience#model-panel{display:block;position:relative}
+ #explore-toggle,#close-explore{display:block}
+ .explore-sidebar{display:none;position:absolute;z-index:9;right:10px;top:10px;width:min(270px,calc(100% - 20px));max-height:calc(100% - 20px);padding:19px;border:1px solid #d4dacd;border-radius:7px;box-shadow:0 8px 30px #18332333}
+ .explore-open .explore-sidebar{display:block}
+}
+
+.project-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:0 0 18px;padding:12px 0;border-block:1px solid #dedfd5}
+.project-facts div{display:flex;flex-direction:column-reverse;gap:5px}
+.project-facts dt{font-size:9px;color:#75806e}
+.project-facts dd{margin:0;font:400 19px/1.1 Georgia,serif;color:var(--ink);white-space:nowrap}
+.building-detail,.sidebar-amenities{border-top:1px solid #dce1d4;margin-top:21px;padding-top:17px}
+.building-detail h2,.sidebar-amenities h2{font:500 12px/1.4 system-ui;letter-spacing:.02em;color:#344e3b;margin:0 0 10px}
+.building-detail h2{font:400 22px/1.2 Georgia,serif;margin:0 0 5px}
+#detail-building-number{font-size:9px;letter-spacing:.11em;color:#6d7d65;margin:0 0 12px;text-transform:uppercase}
+#detail-building-facts{display:grid;gap:9px;margin:0}
+#detail-building-facts div{display:grid;grid-template-columns:1fr 1.3fr;gap:8px;font-size:10px;line-height:1.4}
+#detail-building-facts dt{color:#7b8573}#detail-building-facts dd{margin:0;color:#3d5542;text-align:right}
+.sidebar-amenities nav{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sidebar-amenities button{padding:9px 7px;text-align:left;border:1px solid #d7dece;background:#f0f3ea;color:#496248;border-radius:4px;font:10px/1.35 system-ui}
+.sidebar-amenities button:hover,.sidebar-amenities button[aria-pressed=true]{background:#e0e9d7;border-color:#adbea0;color:#294a30}
+.explore-sidebar .floor-picker{margin-top:0}
+
+/* Match Sai World Dream's ivory, sage and forest-green interface palette. */
+.explore-sidebar{border-right-color:var(--line)}
+.explore-sidebar .floor-picker select{background:#fbfaf4;color:#263b2b;border-color:#bfc8b5}
+.explore-sidebar .floor-picker button:not(#view-building){background:#3e5842;color:#fff}
+#view-building{background:#e7ebdf;color:#314c37;border-color:#cbd3c3}
+.project-facts{border-color:var(--line)}
+.project-facts dt,#detail-building-number{color:var(--muted)}
+.sidebar-amenities button[aria-pressed=true]{background:#e7ebdf;color:#314c37}
+
+.development-kicker{margin:0 0 20px;font:600 8px/1.5 'Segoe UI',sans-serif;letter-spacing:1.25px;color:var(--ink)}
+.explore-sidebar>header{align-items:flex-start}
+.explore-sidebar h1{font:400 34px/1.08 Georgia,serif;letter-spacing:-.8px;margin:0}
+.development-intro{font-size:12px;line-height:1.75;color:var(--muted);margin:20px 0 22px;max-width:25ch}

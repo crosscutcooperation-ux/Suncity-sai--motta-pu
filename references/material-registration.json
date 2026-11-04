@@ -1,0 +1,28 @@
+{
+  "source": "references/25 Podium nd Building.jpg",
+  "sourcePixels": [
+    5000,
+    3747
+  ],
+  "quad": [
+    [
+      2233.333251953125,
+      2166.666748046875
+    ],
+    [
+      2370.0,
+      2193.333251953125
+    ],
+    [
+      2363.333251953125,
+      2520.0
+    ],
+    [
+      2236.666748046875,
+      2493.333251953125
+    ]
+  ],
+  "tileFloors": 4,
+  "qualityReference": "Sai World Dream facade roughness, metalness and glazing workflow",
+  "approximation": "Masks estimated from rendered colour. Lighting and occlusion remain partly baked into base colour."
+}

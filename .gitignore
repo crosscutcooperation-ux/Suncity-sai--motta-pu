@@ -1,0 +1,10 @@
+# Local dependencies and generated files
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.blend1
+*.tar.gz
+.env
+.env.*
+!.env.example

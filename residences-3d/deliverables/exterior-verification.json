@@ -1,0 +1,24 @@
+{
+  "editableTowerRoots": 26,
+  "packedImages": [
+    "canopy-spray.png",
+    "environment.hdr",
+    "facade-sun-city.jpg",
+    "grass.jpg",
+    "grass.jpg.001",
+    "wood-deck.jpg"
+  ],
+  "amenities": [
+    "Commercial podium and sports deck",
+    "Central gardens",
+    "Club Atlantis",
+    "Swimming pool terrace",
+    "Club Golden Dunes",
+    "Circular arrival plaza",
+    "Sports avenue"
+  ],
+  "glbSha256": "f3b6c62c9b6b980511f5c7d83c6aba16798cf139b1d36ba42a6dc1d84b5a6760",
+  "blendSha256": "6e2dca3767507ad523b50fbc8cd3a58bc71d83a2836ee7a16a74af40b6ba07f7",
+  "preview": "exterior-cycles-preview.png",
+  "verification": "Reopened the saved Blender file in background mode and rendered with Cycles."
+}

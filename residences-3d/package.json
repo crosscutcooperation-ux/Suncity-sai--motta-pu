@@ -1,0 +1,12 @@
+{
+  "name": "sai-sun-city-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 4174 --bind 127.0.0.1 --directory dist",
+    "check": "node scripts/check.mjs",
+    "test": "node tests/project.test.mjs && node tests/exterior-batching.test.mjs",
+    "export": "node scripts/export-model.mjs"
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "key": "aerial",
+    "title": "1 Cam bird eye view",
+    "src": "assets/aerial.webp"
+  },
+  {
+    "key": "aerial-reverse",
+    "title": "2 Cam bird eye view",
+    "src": "assets/aerial-reverse.webp"
+  },
+  {
+    "key": "roadside",
+    "title": "6 Wrom Eye View",
+    "src": "assets/roadside.webp"
+  },
+  {
+    "key": "plaza",
+    "title": "9 High Angle with plaza_day",
+    "src": "assets/plaza.webp"
+  },
+  {
+    "key": "entrance",
+    "title": "Sai Sun City - 1 Entrance Driveway View",
+    "src": "assets/entrance.webp"
+  },
+  {
+    "key": "courtyard",
+    "title": "25 Podium nd Building",
+    "src": "assets/courtyard.webp"
+  },
+  {
+    "key": "club-night",
+    "title": "41 Club House night view",
+    "src": "assets/club-night.webp"
+  },
+  {
+    "key": "boulevard",
+    "title": "8 Wrom Eye View with plaza",
+    "src": "assets/boulevard.webp"
+  },
+  {
+    "key": "garden-reference",
+    "title": "Garden Reference",
+    "src": "assets/garden-reference.webp"
+  },
+  {
+    "key": "sports-reference",
+    "title": "Sports Reference",
+    "src": "assets/sports-reference.webp"
+  },
+  {
+    "key": "club-reference",
+    "title": "Club Reference",
+    "src": "assets/club-reference.webp"
+  },
+  {
+    "key": "lobby-reference",
+    "title": "Lobby Reference",
+    "src": "assets/lobby-reference.webp"
+  },
+  {
+    "key": "master-layout",
+    "title": "Master Layout",
+    "src": "assets/master-layout.webp"
+  }
+]

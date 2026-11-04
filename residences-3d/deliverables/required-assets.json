@@ -1,0 +1,18 @@
+{
+  "glb": "sai-sun-city-exterior.glb",
+  "editable": "Sai Sun City exterior.blend",
+  "embeddedTextures": [
+    "facade-sun-city.jpg",
+    "grass.jpg",
+    "wood-deck.jpg",
+    "canopy-spray.png"
+  ],
+  "textureSources": [
+    "textures/facade-sun-city.jpg",
+    "textures/grass.jpg",
+    "textures/wood-deck.jpg",
+    "textures/canopy-spray.png"
+  ],
+  "notes": "ACCURACY.md documents estimated dimensions, hidden elevations, lighting, and render environment. The Blender file includes an illustrative ground plane used for the preview. The GLB includes the traced site surface.",
+  "verification": "exterior-verification.json"
+}

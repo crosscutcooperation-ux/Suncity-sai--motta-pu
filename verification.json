@@ -1,0 +1,28 @@
+{
+  "registeredTowers": 26,
+  "residentialFloors": 32,
+  "maximumTowerPositionChange": 3.662109378410605e-06,
+  "maximumFacadeBoundsChange": 1.1945353222131416e-05,
+  "embeddedImages": 6,
+  "nodes": 523,
+  "gpuInstanceGroups": 172,
+  "extensions": [
+    "KHR_materials_clearcoat",
+    "KHR_texture_transform",
+    "EXT_mesh_gpu_instancing"
+  ],
+  "glbBytes": 16946820,
+  "glbSha256": "c6caa3cf3b8d3dbe9d9d60bbd421d160730283b1f14b659e40e7efcf904008eb",
+  "verification": "Registered placement and facade bounds retained from the brochure-based baseline. This is a consistency check, not a dimensional survey.",
+  "blendReopenedInBackground": true,
+  "packedBlenderImages": [
+    "canopy-spray.png",
+    "environment.hdr",
+    "facade-day-base.jpg",
+    "facade-orm.png",
+    "grass.jpg",
+    "stone-normal.png",
+    "wood-deck.jpg"
+  ],
+  "blendSha256": "07a475527d656f8147395e273b25aee32808f6e8d7204f830fb682334094441a"
+}

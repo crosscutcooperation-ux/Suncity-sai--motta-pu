@@ -1,0 +1,122 @@
+@property --band-top{syntax:"<percentage>";inherits:false;initial-value:50%}
+@property --band-bottom{syntax:"<percentage>";inherits:false;initial-value:52%}
+.roof-caption,.roof-arrow{pointer-events:auto;cursor:pointer}
+.roof-caption:focus-visible{outline:2px solid #aff792}
+#elevation{position:fixed;inset:0;border:0;margin:0;width:100%;height:100%;max-width:none;max-height:none;padding:0;color:#f2ede3;background:#102c48;overflow:hidden}
+#elevation::backdrop{background:#081a2adb;backdrop-filter:blur(12px)}
+#elevation-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(4px) saturate(.65);opacity:.28;pointer-events:none}
+.elevation-glass{position:absolute;inset:0;background:linear-gradient(90deg,#081729d9,#153c655e 58%,#102842a3);backdrop-filter:blur(3px);border:1px solid #ffffff1c;pointer-events:none}
+.elevation-layout{position:relative;box-sizing:border-box;width:100%;height:100%;display:grid;grid-template-columns:minmax(220px,34%) minmax(0,1fr) 80px;grid-template-rows:62px minmax(0,1fr);padding:0 clamp(18px,3vw,64px) 20px}
+.elevation-header{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff29;font:500 10px/1.4 system-ui;letter-spacing:.2em;color:#dde3e8;z-index:2}
+#elevation button{font-family:inherit;cursor:pointer}
+#leave-elevation{background:transparent;color:#f7f2e8;border:0;padding:10px 0;font-size:14px}
+.elevation-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:clamp(16px,3.6vh,42px);min-width:0;padding:14px 0;z-index:2}
+.elevation-logo{width:clamp(100px,10vw,168px);height:auto;filter:drop-shadow(0 2px 8px #0003)}
+#elevation-index{color:#dae0e6;font:500 10px/1.5 system-ui;letter-spacing:.19em}
+#elevation-name{margin:8px 0 0;color:#fff;font:400 clamp(32px,5.5vw,96px)/1 Georgia,serif;letter-spacing:-.045em}
+.elevation-rule{display:block;height:1px;width:64px;background:#ffffffba}
+.elevation-description p{font:400 13px/1.7 system-ui;letter-spacing:.16em;text-transform:uppercase;color:#f3f5f7;max-width:28ch;margin:20px 0}
+#elevation-readout{font:400 clamp(25px,3vw,42px)/1.3 Georgia,serif;margin-top:26px}
+#elevation-note{display:block;color:#cbd6e3;font:11px/1.6 system-ui;letter-spacing:.035em;max-width:34ch;margin-top:10px}
+.elevation-stage{position:relative;min-width:0;min-height:0;align-self:stretch}
+#elevation-stage #scene{position:absolute;inset:0;width:100%;height:100%;min-height:0;touch-action:pan-y;cursor:default;pointer-events:none}
+#elevation-dim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,#07142985 0%,#07142985 var(--band-top,50%),transparent var(--band-top,50%),transparent var(--band-bottom,52%),#07142985 var(--band-bottom,52%),#07142985 100%);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+#elevation-bands{position:absolute;inset:0 auto 0 0;pointer-events:none}
+#elevation-bands div{position:absolute;left:0;right:0;pointer-events:auto;cursor:pointer}
+#elevation-bands i{display:block;position:absolute;left:0;right:0;pointer-events:none;background:#ffffff26}
+#elevation-bands i[hidden]{display:none}
+#elevation-indicator{position:absolute;left:20%;right:14%;height:1px;background:#ffffffe0;box-shadow:0 0 8px #ffffff24;pointer-events:none;z-index:3}
+#elevation-tag{position:absolute;right:100%;top:0;transform:translate(-12px,-50%);font:500 11px/1 system-ui;letter-spacing:.15em;color:#fff}
+#elevation-open{position:absolute;top:0;left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:auto;background:#f3efe8;color:#263446;padding:13px 20px;border-radius:30px;border:1px solid #ffffff9c;box-shadow:0 6px 20px #0002;font:500 10px/1 system-ui;letter-spacing:.2em}
+#elevation-open:hover{background:#fff;box-shadow:0 6px 24px #0004}
+.elevation-navigation{display:flex;flex-direction:column;min-height:0;align-self:center;width:100%;max-height:88%;gap:10px;text-align:center;z-index:4}
+.elevation-navigation>span{color:#d5deea;font:500 10px/1.5 system-ui;letter-spacing:.19em}
+#elevation-levels{overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#a9bfd45c transparent;padding:4px}
+#elevation-levels button{position:relative;display:block;width:100%;min-height:30px;background:transparent;border:0;color:#c4d3e6;letter-spacing:.17em;font:400 15px/1 system-ui;font-variant-numeric:tabular-nums;padding:0}
+#elevation-levels button::before{content:"";position:absolute;right:calc(50% + 23px);top:50%;width:0;height:1px;background:#fff;transition:width .3s}
+#elevation-levels button[aria-current]{color:#fff}
+#elevation-levels button[aria-current]::before{width:28px}
+#elevation button:focus-visible{outline:1px solid #fff;outline-offset:2px}
+.elevation-navigation.aligned{align-self:start;max-height:none;gap:0;position:relative;top:var(--rail-top);left:var(--rail-shift)}
+.elevation-navigation.aligned>span{position:absolute;bottom:100%;left:0;width:100%;padding-bottom:14px}
+.elevation-navigation.aligned #elevation-levels{overflow:visible;padding:0}
+.elevation-navigation.aligned #elevation-levels button{height:var(--pitch);min-height:0;font-size:clamp(12px,1vw,16px)}
+.elevation-navigation.aligned #elevation-levels button:last-child{height:var(--ground-pitch)}
+@keyframes elevation-arrive{from{opacity:0;transform:translateY(20px) scale(1.025)}to{opacity:1;transform:none}}
+@keyframes elevation-copy-in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes level-reveal{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){
+ #elevation[open] .elevation-stage{animation:elevation-arrive .85s cubic-bezier(.22,.61,.36,1) both}
+ #elevation[open] .elevation-copy{animation:elevation-copy-in .85s .06s ease-out both}
+ #elevation[open] #elevation-levels button{animation:level-reveal .55s var(--reveal-delay) ease-out both}
+ #elevation-dim{transition:--band-top .55s cubic-bezier(.215,.61,.355,1),--band-bottom .55s cubic-bezier(.215,.61,.355,1)}
+ #elevation-indicator{transition:top .55s cubic-bezier(.215,.61,.355,1)}
+ #elevation-bands i{transition:top .55s cubic-bezier(.215,.61,.355,1),height .55s}
+ #elevation-readout{animation:elevation-copy-in .45s ease-out}
+ #floor-plan-dialog[open]{animation:elevation-copy-in .45s ease-out}
+}
+@media(max-width:650px){
+ .elevation-layout{padding:0 12px 16px;grid-template-columns:minmax(0,1fr) 54px;grid-template-rows:44px auto minmax(0,1fr)}
+ .elevation-header span{font-size:8px}
+ .elevation-copy{grid-column:1/-1;display:grid;grid-template-columns:62px 1fr;align-items:center;gap:8px 16px;padding:14px 0}
+ .elevation-logo{width:58px}
+ #elevation-name{font-size:30px;margin-top:3px}
+ #elevation-index{font-size:8px;margin:0}
+ .elevation-description{grid-column:1/-1;display:flex;align-items:center;gap:12px}
+ .elevation-description p,.elevation-rule{display:none}
+ #elevation-readout{font-size:19px;margin:0;white-space:nowrap}
+ #elevation-note{font-size:9px;margin:0;max-width:30ch}
+ #elevation-open{padding:12px 15px;font-size:9px;letter-spacing:.12em}
+ .elevation-navigation{max-height:95%}
+ #elevation-levels button{min-height:34px}
+ .elevation-navigation>span{font-size:8px}
+}
+
+.elevation-switcher{margin-left:auto;margin-right:24px;max-width:40vw;padding:8px 12px;color:#f2ede3;background:#18334d;border:1px solid #ffffff66;border-radius:2px;font:500 11px system-ui;letter-spacing:.08em}
+#elevation-stage #scene{transform-origin:50% 50%;will-change:transform,opacity}
+@media(min-width:651px){.elevation-layout{grid-template-columns:minmax(0,1fr) minmax(280px,42%) minmax(0,1fr)}.elevation-navigation{justify-self:start;max-width:72px}}
+#elevation[open] .elevation-stage{animation:none}
+#elevation-background{opacity:.56;filter:blur(2px) saturate(.86)}
+
+/* Keep the selected original mesh in front of the frosted development. */
+#elevation-stage #scene{pointer-events:auto;touch-action:none;cursor:grab}
+#elevation-stage #scene:active{cursor:grabbing}
+#elevation-indicator[hidden],#elevation-dim[hidden]{display:none}
+.elevation-logo{filter:none;background:transparent;object-fit:contain}
+.elevation-glass{background:linear-gradient(90deg,#081729e0,#153c6575 58%,#102842b3);backdrop-filter:blur(7px)}
+.elevation-stage::after{content:"Drag to rotate · Hover over a floor to select a level";position:absolute;bottom:4px;left:0;right:0;text-align:center;font:11px/1.5 system-ui;letter-spacing:.05em;color:#e5ecf5;pointer-events:none}
+
+#elevation-bands div{pointer-events:none}
+#elevation[data-arriving=true] .elevation-stage,#elevation[data-arriving=true] .elevation-navigation{pointer-events:none}
+.elevation-stage::after{content:"Drag to rotate 360° · Hover over the tower to select a level"}
+
+#elevation-stage #scene,#elevation-stage #scene:active{cursor:default}
+.elevation-stage::after{content:"Hover over the building to select a level · Click Open level to view the plan"}
+
+/* The moving white band is the only floor-hover treatment. */
+#elevation-dim{display:none;background:none;mask-image:none}
+#elevation-bands{overflow:hidden}
+
+.elevation-stage::after{content:"Hover to highlight · Click a floor or level number to open the plan"}
+
+/* Neutral selection view: no dark-blue overlay. */
+#elevation{background:#f7f5ef;color:#263b30}
+#elevation::backdrop{background:#e7e9e0b3;backdrop-filter:blur(5px)}
+#elevation-background{opacity:.24;filter:blur(3px) saturate(.82)}
+.elevation-glass{background:linear-gradient(90deg,#f7f5eff0,#f7f5efc9 58%,#f7f5efe8);backdrop-filter:blur(3px);border:0}
+.elevation-header{border-bottom-color:#a5b3a74d;color:#586d5d}
+#leave-elevation,#elevation-name,#elevation-readout{color:#263b30}
+#elevation-index,.elevation-description p,.elevation-navigation>span{color:#536b5a}
+#elevation-note{color:#586f60}
+.elevation-rule{background:#617d67}
+.elevation-switcher{background:#fafbf6;color:#2c4535;border-color:#b9c7b5}
+#elevation-levels{scrollbar-color:#82977980 transparent}
+#elevation-levels button{color:#5e7462}
+#elevation-levels button[aria-current]{color:#1d432a;background:#e5ebdd;border-radius:3px}
+#elevation-levels button::before{background:#40664b}
+#elevation-indicator{background:#456c50;box-shadow:none}
+#elevation-tag{color:#2a5036}
+#elevation-open{background:#34543f;color:#fff;border-color:#34543f;box-shadow:0 4px 15px #263b3020}
+#elevation-open:hover{background:#243f2d}
+#elevation button:focus-visible{outline-color:#527459}
+.elevation-stage::after{color:#48634f;text-shadow:none}

@@ -1,0 +1,122 @@
+[
+  {
+    "key": "podium",
+    "title": "The residential skyline",
+    "description": "A full-height view of the residential towers, from the arcaded podium to the green domes.",
+    "src": "assets/exteriors/podium.webp",
+    "thumb": "assets/exteriors/podium-thumb.webp",
+    "preview": "assets/exteriors/podium-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2878,
+    "sourceUrl": "https://drive.google.com/file/d/13LuiD8NW9fqTU0d4UbaRsxmmxbf4PzXd/view?usp=drivesdk"
+  },
+  {
+    "key": "arrival",
+    "title": "The entrance avenue",
+    "description": "Paired domes frame the tree-lined drive through the main entrance.",
+    "src": "assets/exteriors/arrival.webp",
+    "thumb": "assets/exteriors/arrival-thumb.webp",
+    "preview": "assets/exteriors/arrival-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 3072,
+    "sourceUrl": "https://drive.google.com/file/d/1Yh3k1G1B2LdQSS7eUbQmUq0hsmEIJYqS/view?usp=drivesdk"
+  },
+  {
+    "key": "aerial",
+    "title": "Township from above",
+    "description": "An aerial view across the residential blocks, central gardens and clubhouse.",
+    "src": "assets/exteriors/aerial.webp",
+    "thumb": "assets/exteriors/aerial-thumb.webp",
+    "preview": "assets/exteriors/aerial-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2160,
+    "sourceUrl": "https://drive.google.com/file/d/1KuEpDJbp40OSuwFK5dNFXQW_oW3e8oLs/view?usp=drivesdk"
+  },
+  {
+    "key": "aerial-reverse",
+    "title": "The reverse aerial",
+    "description": "The second aerial angle shows the towers grouped around their courtyards.",
+    "src": "assets/exteriors/aerial-reverse.webp",
+    "thumb": "assets/exteriors/aerial-reverse-thumb.webp",
+    "preview": "assets/exteriors/aerial-reverse-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2026,
+    "sourceUrl": "https://drive.google.com/file/d/1H-rzpzYthafBZYaq_P9a3dOtVDHJMzQk/view?usp=drivesdk"
+  },
+  {
+    "key": "plaza",
+    "title": "Plaza at sundown",
+    "description": "Warm light crosses the balconies and the sculptural fountain in the arrival plaza.",
+    "src": "assets/exteriors/plaza.webp",
+    "thumb": "assets/exteriors/plaza-thumb.webp",
+    "preview": "assets/exteriors/plaza-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 3168,
+    "sourceUrl": "https://drive.google.com/file/d/1q0fLJcYA9ohsEtxzOMQ00o6OeZRyEnHa/view?usp=drivesdk"
+  },
+  {
+    "key": "plaza-night",
+    "title": "Plaza after dark",
+    "description": "Illuminated residential façades rise above the fountain at night.",
+    "src": "assets/exteriors/plaza-night.webp",
+    "thumb": "assets/exteriors/plaza-night-thumb.webp",
+    "preview": "assets/exteriors/plaza-night-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2160,
+    "sourceUrl": "https://drive.google.com/file/d/1IJg7Ky17UHu-WZgP1eNwGwfSatfnFI0j/view?usp=drivesdk"
+  },
+  {
+    "key": "boulevard",
+    "title": "The central boulevard",
+    "description": "A street-level perspective across the plaza toward the residential wings.",
+    "src": "assets/exteriors/boulevard.webp",
+    "thumb": "assets/exteriors/boulevard-thumb.webp",
+    "preview": "assets/exteriors/boulevard-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2158,
+    "sourceUrl": "https://drive.google.com/file/d/1Dr1HsK5dtBOv9ey-SOUJ57FbkPtMyJaK/view?usp=drivesdk"
+  },
+  {
+    "key": "fountain",
+    "title": "The palm court",
+    "description": "The curved arrival court, palm planting and central fountain from above.",
+    "src": "assets/exteriors/fountain.webp",
+    "thumb": "assets/exteriors/fountain-thumb.webp",
+    "preview": "assets/exteriors/fountain-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2160,
+    "sourceUrl": "https://drive.google.com/file/d/1fTmjd7CkzWqu39KlcoMbzteI2elhj-cj/view?usp=drivesdk"
+  },
+  {
+    "key": "downward",
+    "title": "From the upper floors",
+    "description": "A downward perspective into the landscaped grounds.",
+    "src": "assets/exteriors/downward.webp",
+    "thumb": "assets/exteriors/downward-thumb.webp",
+    "preview": "assets/exteriors/downward-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2160,
+    "sourceUrl": "https://drive.google.com/file/d/1w2MpnHCgHlD9EUUgGAQGAAEZsjmUuMbo/view?usp=drivesdk"
+  },
+  {
+    "key": "club-night",
+    "title": "The pool at night",
+    "description": "The illuminated pool terrace and stepped clubhouse overlook the gardens.",
+    "src": "assets/exteriors/club-night.webp",
+    "thumb": "assets/exteriors/club-night-thumb.webp",
+    "preview": "assets/exteriors/club-night-screen.webp",
+    "previewWidth": 1600,
+    "width": 3840,
+    "height": 2159,
+    "sourceUrl": "https://drive.google.com/file/d/11ypQo1EAf377oc5weglwR28AFJINLcK6/view?usp=drivesdk"
+  }
+]

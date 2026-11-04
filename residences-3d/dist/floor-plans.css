@@ -1,0 +1,123 @@
+
+.floor-picker{margin:24px 0;padding:22px 0;border-top:1px solid #d8dacc;border-bottom:1px solid #d8dacc;display:grid;gap:9px}.floor-picker label{font-size:12px;color:#53634f}.floor-picker select,.plan-selectors select{width:100%;padding:11px 12px;border:1px solid #bfc8b5;border-radius:4px;background:#fbfaf4;color:#263b2b;font:inherit;font-size:13px}.floor-picker button{padding:12px;background:#3e5842;color:#fff;border:0;border-radius:3px;cursor:pointer}.floor-picker button:disabled{opacity:.4;cursor:default}.floor-picker p{font-size:11px;line-height:1.6;color:#67725e;margin:3px 0}#floor-plan-dialog{width:min(1460px,96vw);max-width:none;height:min(960px,94dvh);max-height:none;padding:0;border:0;border-radius:8px;background:#f7f6ef;color:#283b2b;overflow:auto}#floor-plan-dialog::backdrop{background:#18261ed9;backdrop-filter:blur(6px)}.plan-header{display:flex;justify-content:space-between;align-items:center;padding:18px 26px;border-bottom:1px solid #d9ded0}.plan-header p{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin:0 0 6px}.plan-header h2{font-family:Georgia,serif;font-weight:400;font-size:28px;margin:0}.plan-header button{font-size:30px;background:transparent;border:0;color:inherit;cursor:pointer;width:40px;height:40px}.plan-toolbar{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:13px 26px}.plan-selectors{display:flex;gap:14px;flex:1}.plan-selectors label{display:grid;gap:5px;font-size:11px;min-width:130px}.plan-selectors label:first-child{min-width:230px}.plan-modes{display:flex;gap:4px;padding:4px;border:1px solid #cbd2c3;border-radius:5px}.plan-modes button{padding:10px 15px;border:0;background:transparent;color:inherit;border-radius:3px;cursor:pointer;white-space:nowrap}.plan-modes button[aria-pressed=true]{background:#3e5842;color:white}.plan-stage{height:min(61dvh,660px);min-height:300px;position:relative;margin:0 20px;background:#eeede5;border:1px solid #d6d9cd;border-radius:5px;overflow:hidden}#plan-2d{width:100%;height:100%;overflow:auto;display:grid;place-items:center}#floor-plan-image{width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;transform-origin:center;transition:transform .16s}#plan-3d,#floor-plan-canvas{height:100%;width:100%}#floor-plan-canvas canvas{display:block;width:100%;height:100%;touch-action:none}#plan-loading{position:absolute;inset:0;display:grid;place-items:center;background:#eeede5d9;pointer-events:none}#floor-plan-dialog [hidden]{display:none!important}.plan-navigation{position:absolute;left:12px;bottom:12px;display:flex;gap:5px}.plan-navigation button,.plan-zoom button{border:1px solid #c6ccbd;background:#faf9f1ed;border-radius:4px;padding:10px 12px;color:#2d432f;cursor:pointer}.plan-navigation button:disabled{opacity:.4;cursor:default}.plan-zoom{position:absolute;right:12px;bottom:12px;display:flex;gap:5px}#plan-view-help{text-align:center;font-size:11px;color:#5c6e58;margin:10px 18px}#plan-cutaway-note{font-size:11px;text-align:center;color:#6a705f;margin:8px 24px;line-height:1.5}.plan-footer{display:flex;justify-content:space-between;gap:26px;padding:13px 26px 18px;border-top:1px solid #daddd2;align-items:center}.plan-footer p{margin:0;font-size:11px;line-height:1.55;max-width:850px}.plan-footer a{color:#3c583c;white-space:nowrap;font-size:12px}#plan-empty{text-align:center;min-height:340px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px}#plan-empty span{font-size:10px;letter-spacing:1.5px}#plan-empty h3{font:26px Georgia,serif}#plan-empty p{max-width:540px;font-size:14px;line-height:1.7}button:focus-visible,select:focus-visible{outline:2px solid #748b4b;outline-offset:3px}@media(max-width:780px){#floor-plan-dialog{width:98vw;height:96dvh}.plan-header{padding:14px}.plan-header h2{font-size:23px}.plan-toolbar{padding:12px;display:grid;gap:12px}.plan-selectors{display:grid;grid-template-columns:1fr 1fr;gap:9px}.plan-selectors label:first-child{min-width:0}.plan-selectors label{min-width:0}#plan-kind-label{grid-column:1/-1}.plan-selectors select{padding:9px 8px}.plan-modes{justify-self:start}.plan-stage{margin:0 9px;height:48dvh;min-height:260px}.plan-footer{display:block;padding:14px}.plan-footer a{display:inline-block;margin-top:10px}.plan-zoom button,.plan-navigation button{padding:9px;font-size:11px}.plan-navigation{left:7px}.plan-zoom{right:7px}#plan-cutaway-note{margin:8px 14px}}
+
+#open-plan-picker{margin-left:auto;font-size:11px;color:#3e5842;white-space:nowrap;padding:9px;border:1px solid #c6cebb;border-radius:4px;cursor:pointer}#open-reference{margin-left:14px}@media(max-width:480px){#open-plan-picker{font-size:9px;padding:7px}#open-reference{margin-left:6px}}
+
+#reference-detail {display:inline-block;margin-top:14px;color:#354d3a;font-size:12px}
+#reference-detail[hidden] {display:none}
+@media(max-width:480px){
+  #open-reference,#open-plan-picker {min-width:0}
+  #open-reference {gap:3px;margin-left:4px;font-size:9px}
+  #open-reference svg {display:none}
+  #open-plan-picker {padding:6px 4px}
+}
+
+@media(max-width:480px){.header{gap:6px;padding-inline:10px}.header .brand{flex-shrink:1;min-width:0}.header .brand svg{width:22px}.header .brand span{font-size:12px}.header .brand small{letter-spacing:.7px}.header .breadcrumb{display:none}}
+/* Selectable apartments follow the supplied floor drawing's coordinate system. */
+#floor-plan-dialog{position:fixed;inset:0;width:100%;height:100dvh;max-height:none;margin:0;border-radius:0;background:#0b1826c9;color:#eef2f5;overflow:auto}
+#floor-plan-dialog::backdrop{background:#071321b5;backdrop-filter:blur(1px)}
+#plan-background{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.22;pointer-events:none}
+.plan-header,.plan-toolbar,#plan-content,.plan-footer,#plan-empty,#apartment-sidebar{position:relative;z-index:1}
+.plan-header{border-color:#ffffff21;padding:20px 3vw 10px}
+.plan-header h2{font-size:clamp(27px,3vw,48px)}
+.plan-header p{color:#cbd7e1}
+.plan-header #apartment-summary{font-size:12px;margin-top:12px;letter-spacing:.1em}
+#apartment-legend{display:flex;gap:20px;flex-wrap:wrap;font:12px/1.5 system-ui;color:#e0e7ed;margin-top:10px}
+#apartment-legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--unit-color);margin-right:7px}
+.plan-toolbar{padding:10px 3vw}
+.plan-selectors select{background:#122334c9;color:#eef3f7;border-color:#ffffff35;font-size:12px;padding:7px 10px}
+.plan-selectors label{color:#bdcbd7}
+.plan-modes{border-color:#ffffff40}
+.plan-modes button{color:#e8edf2}
+.plan-modes button[aria-pressed=true]{background:#e9edf0;color:#102033}
+.plan-stage{height:calc(100dvh - 330px);min-height:260px;margin:0 4vw;background:transparent;border:0;border-radius:0}
+#plan-2d{overflow:auto;padding:12px;box-sizing:border-box}
+#plan-drawing{position:relative;flex-shrink:0;transform-origin:center;transition:transform .2s}
+#floor-plan-image{display:block;width:100%;height:100%;object-fit:contain;transform:none}
+#apartment-hotspots{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+#apartment-hotspots g{cursor:pointer;outline:none}
+#apartment-hotspots path{fill:var(--unit-color);fill-opacity:.27;stroke:var(--unit-color);stroke-width:2;transition:fill-opacity .25s,stroke-width .25s}
+#apartment-hotspots g:hover path,#apartment-hotspots g:focus path,#apartment-hotspots g.highlight path{fill-opacity:.58;stroke:#fff;stroke-width:4}
+#apartment-hotspots text{font:600 27px system-ui;fill:white;paint-order:stroke;stroke:#102030;stroke-width:5px;text-anchor:middle;dominant-baseline:middle;pointer-events:none}
+#apartment-list{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:8px 4vw}
+#apartment-list button{border:1px solid #ffffff30;border-left:3px solid var(--unit-color);background:#0b1a2bbf;color:#e5ecf2;padding:7px 10px;font:11px system-ui;cursor:pointer}
+#apartment-list button:hover{background:#ffffff20}
+#plan-view-help,#plan-cutaway-note{color:#d1dce5}
+.plan-footer{border-color:#ffffff20;padding:10px 3vw}
+.plan-footer a{color:#d2dce8}
+#apartment-sidebar{display:none}
+#floor-plan-dialog.apartment .plan-header{padding-left:3vw}
+#floor-plan-dialog.apartment .plan-header h2,#floor-plan-dialog.apartment #apartment-legend,#floor-plan-dialog.apartment #apartment-summary{display:none}
+.apartment #apartment-sidebar{display:block;position:absolute;left:3vw;top:18vh;width:28vw}
+#apartment-back{padding:10px 0;border:0;background:transparent;color:#e6ebef;cursor:pointer;font:11px system-ui;letter-spacing:.15em;text-transform:uppercase}
+#apartment-level{margin-top:35px;font:11px system-ui;letter-spacing:.18em;color:#b9c8d8}
+#apartment-type{font:400 clamp(30px,3.6vw,64px)/1.1 Georgia,serif;margin:18px 0}
+#apartment-number{font:12px system-ui;letter-spacing:.2em;color:#ccd6df}
+.apartment-instruction{border-top:1px solid #ffffff25;padding-top:24px;margin-top:40px;font:12px/1.7 system-ui;letter-spacing:.12em;text-transform:uppercase}
+.apartment .plan-selectors,.apartment #apartment-list,.apartment .plan-navigation{display:none}
+.apartment .plan-toolbar{position:absolute;left:3vw;top:65vh;padding:0}
+.apartment #plan-content{margin:20px 3vw 0 36vw}
+.apartment .plan-stage{height:calc(100dvh - 175px);margin:0;background:#f8f9fa;border:1px solid #ffffff5c;border-radius:2px}
+.apartment #plan-2d{padding:20px}
+.apartment #floor-plan-image{cursor:pointer}
+.apartment #floor-plan-image:focus-visible{outline:2px solid #578bb2}
+.apartment .plan-footer{padding-top:5px;font-size:10px}
+.apartment #plan-cutaway-note{max-width:60vw}
+@media(max-width:780px){
+ .plan-header{padding:14px}.plan-header h2{font-size:25px}
+ .plan-toolbar{padding:10px 14px}.plan-selectors{display:flex;flex-wrap:wrap}.plan-selectors label:first-child{min-width:140px}
+ .plan-selectors label{min-width:90px;flex:1}#plan-kind-label{grid-column:auto}
+ .plan-stage{height:calc(100dvh - 395px);margin:0 12px;min-height:220px}
+ #apartment-legend{gap:12px;font-size:10px}#apartment-list button{font-size:10px}
+ #floor-plan-dialog.apartment #apartment-sidebar{position:relative;left:auto;top:auto;width:auto;padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}
+ #apartment-back{grid-column:1/-1;text-align:left;padding:6px 0}#apartment-level{font-size:9px;margin:4px 0}
+ #apartment-type{font-size:25px;margin:5px 0;grid-row:3;grid-column:1/-1}
+ #apartment-number{font-size:10px;margin:4px 0}
+ .apartment-instruction{grid-column:1/-1;margin:0;padding:6px 0;border:0;font-size:9px}
+ .apartment .plan-toolbar{position:relative;left:0;top:0;padding:8px 14px}
+ .apartment #plan-content{margin:0 12px}
+ .apartment .plan-stage{height:calc(100dvh - 315px);min-height:240px}
+ .apartment #plan-cutaway-note{max-width:none}
+ .plan-footer{padding:10px 14px}.plan-footer p{font-size:10px}
+}
+
+#floor-plan-dialog:not(.apartment) #floor-plan-image{filter:grayscale(1) invert(1) brightness(1.4);mix-blend-mode:screen}
+#floor-plan-dialog:not(.apartment) .plan-stage{height:calc(100dvh - 300px)}
+#apartment-hotspots[hidden]{display:none}
+.apartment #floor-plan-image{filter:none;mix-blend-mode:normal}
+#plan-3d{overflow:hidden}
+@media(max-width:780px){#floor-plan-dialog:not(.apartment) .plan-stage{height:calc(100dvh - 390px)}}
+
+#floor-levels{position:absolute;right:22px;top:24vh;bottom:90px;width:42px;overflow:auto;scrollbar-width:thin;z-index:3;display:flex;flex-direction:column}
+#floor-levels button{position:relative;flex:1;min-height:15px;width:100%;padding:0;background:none;border:0;color:#acbac9;font:11px system-ui;cursor:pointer}
+#floor-levels button[aria-current=true]{color:#fff}
+#floor-levels button[aria-current=true]::before{content:"";position:absolute;right:90%;top:50%;height:1px;width:15px;background:#fff}
+.apartment #floor-levels{display:none}
+#floor-plan-dialog:not(.apartment) .plan-stage{margin-right:85px}
+.from-elevation .plan-selectors label:first-child,.from-elevation .plan-selectors label:nth-child(2){display:none}
+.from-elevation .plan-toolbar{justify-content:space-between}
+.from-elevation .plan-selectors{flex:0 0 auto}
+@media(max-width:780px){#floor-levels{right:6px;width:30px;top:36vh;bottom:140px}#floor-plan-dialog:not(.apartment) .plan-stage{margin-right:42px}}
+.apartment #plan-drawing{perspective:1600px}
+.unit-cutaway{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;object-fit:contain;mask-image:linear-gradient(to top,#000 calc(var(--build,0)*142% - 40%),transparent calc(var(--build,0)*142%))}
+.apartment #floor-plan-image{transition:none}
+
+/* Match the neutral building-selection view throughout the floor flow. */
+#floor-plan-dialog{background:#f7f5eff5;color:#293e31}
+#floor-plan-dialog::backdrop{background:#e8ebe1b3;backdrop-filter:blur(3px)}
+#plan-background{opacity:.07}
+.plan-header,.plan-footer{border-color:#cbd3c5}
+.plan-header p,#apartment-legend,.plan-selectors label,#plan-view-help,#plan-cutaway-note{color:#536c5a}
+.plan-selectors select{background:#fffdf7;color:#283d30;border-color:#c1ccb9}
+.plan-modes{border-color:#c4cebb;background:#f1f3eb}
+.plan-modes button{color:#36513e}
+.plan-modes button[aria-pressed=true]{background:#34543f;color:#fff}
+#floor-plan-dialog:not(.apartment) #floor-plan-image{filter:none;mix-blend-mode:normal}
+#apartment-list button{background:#f1f4eaf5;color:#2d4535;border-color:#c8d2c1;border-left-color:var(--unit-color)}
+#apartment-list button:hover{background:#e1e9d8}
+.plan-footer a,#apartment-back{color:#34563d}
+#apartment-level,#apartment-number{color:#596e5f}
+.apartment-instruction{border-top-color:#cbd4c3}
+#floor-levels button{color:#647866}
+#floor-levels button[aria-current=true]{color:#244b30;font-weight:700}
+#floor-levels button[aria-current=true]::before{background:#446b4a}

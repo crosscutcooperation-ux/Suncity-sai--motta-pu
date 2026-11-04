@@ -1,0 +1,5 @@
+# Local dependencies and generated files
+node_modules/
+*.tar.gz
+*.log
+__pycache__/

@@ -1,0 +1,41 @@
+{
+  "model": "Sai Sun City.glb",
+  "editable": "Sai Sun City.blend",
+  "textures": [
+    {
+      "imageIndex": 0,
+      "path": "textures/exported/00-stone-normal.png",
+      "mimeType": "image/png"
+    },
+    {
+      "imageIndex": 1,
+      "path": "textures/exported/01-grass.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "imageIndex": 2,
+      "path": "textures/exported/02-wood-deck.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "imageIndex": 3,
+      "path": "textures/exported/03-canopy-spray.png",
+      "mimeType": "image/png"
+    },
+    {
+      "imageIndex": 4,
+      "path": "textures/exported/04-facade-day-base.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "imageIndex": 5,
+      "path": "textures/exported/05-facade-orm.png",
+      "mimeType": "image/png"
+    }
+  ],
+  "requiredExtensions": [
+    "KHR_materials_clearcoat",
+    "KHR_texture_transform",
+    "EXT_mesh_gpu_instancing"
+  ]
+}
